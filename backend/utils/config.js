@@ -10,10 +10,10 @@ const regex = /^https?:\/\/(w{3}\.)?[-a-z0-9._~:?#[\]@!$&'()*+,;=/]+\.[a-z0-9]+\
 
 const allowedCors = [
   'http://localhost:3000',
-  'https://mesto.shnd3r.nomoredomainsicu.ru'
-]
+  'https://mesto.shnd3r.nomoredomainsicu.ru',
+];
 
-const DEFAULT_ALLOWED_METHODS = "GET, HEAD, PUT, PATCH, POST, DELETE";
+const DEFAULT_ALLOWED_METHODS = 'GET, HEAD, PUT, PATCH, POST, DELETE';
 
 module.exports = {
   JWT_SECRET,
@@ -23,5 +23,5 @@ module.exports = {
   CREATED_STATUS,
   regex,
   allowedCors,
-  DEFAULT_ALLOWED_METHODS
+  DEFAULT_ALLOWED_METHODS,
 };
