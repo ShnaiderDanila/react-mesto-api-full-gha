@@ -221,7 +221,8 @@ const api = new Api({
   baseUrl: 'https://api.mesto.shnd3r.nomoredomainsicu.ru',
   headers: {
     'Content-Type': 'application/json'
-  }
+  },
+  credentials: 'include',
 });
 
 export { api };

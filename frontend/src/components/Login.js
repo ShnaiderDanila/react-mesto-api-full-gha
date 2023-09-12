@@ -22,7 +22,7 @@ function Login({ setLoggedIn, setIsInfoTooltipOpen, setInfoTooltipSuccess }) {
     const { email, password } = formValue;
     api.authorize(email, password)
       .then((res) => {
-        if (res.token) {
+        if (res) {
           // Очищаем инпуты
           setFormValue({
             email: '',
