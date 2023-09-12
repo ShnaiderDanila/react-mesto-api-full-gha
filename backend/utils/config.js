@@ -9,8 +9,8 @@ const CREATED_STATUS = 201;
 const regex = /^https?:\/\/(w{3}\.)?[-a-z0-9._~:?#[\]@!$&'()*+,;=/]+\.[a-z0-9]+\/?[-a-z0-9._~:?#[\]@!$&'()*+,;=/]*#?$/i;
 
 const allowedCors = [
-  'localhost:3000',
-  'mesto.shnd3r.nomoredomainsicu.ru'
+  'http://localhost:3000',
+  'https://mesto.shnd3r.nomoredomainsicu.ru'
 ]
 
 const DEFAULT_ALLOWED_METHODS = "GET, HEAD, PUT, PATCH, POST, DELETE";
