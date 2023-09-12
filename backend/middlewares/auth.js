@@ -3,7 +3,7 @@ const { JWT_SECRET } = require('../utils/config');
 const UnauthorizedError = require('../errors/UnauthorizedError');
 
 const auth = (req, res, next) => {
-  const token = req.cookies;
+  const token = req.cookies.jwt;
   if (!token) {
     return next(new UnauthorizedError('Токена с браузера не пришло'));
   }

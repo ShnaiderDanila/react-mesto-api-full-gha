@@ -170,6 +170,7 @@ class Api {
   register(email, password) {
     return this._request(`signup`, {
       method: 'POST',
+      credentials: 'include',
       headers: this._headers,
       body: JSON.stringify({
         password: password,
@@ -187,18 +188,13 @@ class Api {
   authorize(email, password) {
     return this._request(`signin`, {
       method: 'POST',
+      credentials: 'include',
       headers: this._headers,
       body: JSON.stringify({
         password: password,
         email: email,
       }),
     })
-      .then((res) => {
-        if (res.token) {
-          localStorage.setItem('token', res.token);
-          return res
-        }
-      })
   }
 
 /**
@@ -222,7 +218,6 @@ const api = new Api({
   headers: {
     'Content-Type': 'application/json'
   },
-  credentials: 'include',
 });
 
 export { api };
