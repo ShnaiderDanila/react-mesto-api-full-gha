@@ -1,6 +1,6 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import { authApi } from '../utils/api';
+import { api } from '../utils/api';
 import AuthForm from './AuthForm';
 
 function Register({ setIsInfoTooltipOpen, setInfoTooltipSuccess }) {
@@ -19,7 +19,7 @@ function Register({ setIsInfoTooltipOpen, setInfoTooltipSuccess }) {
   function handleRegister(evt) {
     evt.preventDefault();
     const { email, password } = formValue;
-    authApi.register(email, password)
+    api.register(email, password)
       .then(() => {
         // При получении успешного ответа от сервера, открываем попап с оповещением
         setInfoTooltipSuccess(true);

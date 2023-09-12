@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
-import { api, authApi } from "../utils/api.js";
+import { api } from "../utils/api.js";
 import Header from "./Header";
 import Main from "./Main";
 import Register from './Register';
@@ -57,7 +57,7 @@ function App() {
   const tokenCheck = useCallback(() => {
     const token = localStorage.getItem('token');
     if (token) {
-      authApi.checkToken(token)
+      api.checkToken(token)
         .then((res) => {
           if (res) {
             setLoggedIn(true);

@@ -218,20 +218,13 @@ class Api {
 }
 
 const api = new Api({
-  baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-68',
+  baseUrl: 'https://api.mesto.shnd3r.nomoredomainsicu.ru',
   headers: {
     authorization: '354e8aec-b975-496d-b856-6d5457e3b39e',
     'Content-Type': 'application/json'
   }
 });
 
-const authApi = new Api({
-  baseUrl: 'https://auth.nomoreparties.co',
-  headers: {
-    'Content-Type': 'application/json'
-  }
-});
-
-export { api, authApi };
+export { api };
 
 

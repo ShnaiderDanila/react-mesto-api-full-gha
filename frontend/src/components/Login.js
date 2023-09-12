@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import { authApi } from '../utils/api';
+import { api } from '../utils/api';
 import AuthForm from './AuthForm';
 
 function Login({ setLoggedIn, setIsInfoTooltipOpen, setInfoTooltipSuccess }) {
@@ -20,7 +20,7 @@ function Login({ setLoggedIn, setIsInfoTooltipOpen, setInfoTooltipSuccess }) {
   function handleLogin(evt) {
     evt.preventDefault();
     const { email, password } = formValue;
-    authApi.authorize(email, password)
+    api.authorize(email, password)
       .then((res) => {
         if (res.token) {
           // Очищаем инпуты
