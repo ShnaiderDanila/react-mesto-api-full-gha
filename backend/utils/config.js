@@ -11,6 +11,8 @@ const regex = /^https?:\/\/(w{3}\.)?[-a-z0-9._~:?#[\]@!$&'()*+,;=/]+\.[a-z0-9]+\
 const allowedCors = [
   'http://localhost:3000',
   'https://mesto.shnd3r.nomoredomainsicu.ru',
+  'http://mesto.shnd3r.nomoredomainsicu.ru',
+  'https://api.mesto.shnd3r.nomoredomainsicu.ru',
 ];
 
 const DEFAULT_ALLOWED_METHODS = 'GET, HEAD, PUT, PATCH, POST, DELETE';
