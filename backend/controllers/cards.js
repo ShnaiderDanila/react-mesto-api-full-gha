@@ -15,6 +15,7 @@ const getCards = (req, res, next) => {
 const createCard = (req, res, next) => {
   const { name, link } = req.body;
   Card.create({ name, link, owner: req.user._id })
+    .populate(['owner', 'likes'])
     .then((card) => res.status(CREATED_STATUS).send(card))
     .catch(next);
 };
