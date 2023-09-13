@@ -52,29 +52,24 @@ function App() {
   const navigate = useNavigate();
 
   /**
-   * Функция проверки токена при загрузки страницы
+   * Функция проверки авторизации пользователя при загрузки страницы
    */
-  const tokenCheck = useCallback(() => {
-    const token = localStorage.getItem('token');
-    if (token) {
-      api.checkToken(token)
-        .then((res) => {
-          if (res) {
-            setLoggedIn(true);
-            setUserEmail(res.data.email);
-            navigate('/', { replace: true });
-          }
-        })
-        .catch((err) => {
-          console.error(`Ошибка: ${err}`);
-        });
-    }
+  const checkUserAuthorization = useCallback(() => {
+    api.getUserInfo()
+      .then((userInfo) => {
+        setLoggedIn(true);
+        setUserEmail(userInfo.email);
+        navigate('/', { replace: true });
+      })
+      .catch((err) => {
+        console.error(`Ошибка: ${err}`);
+      });
   }, [navigate])
 
-  // Проверка токена
+  // Проверка авторизации пользователя
   useEffect(() => {
-    tokenCheck();
-  }, [tokenCheck])
+    checkUserAuthorization();
+  }, [checkUserAuthorization])
 
   // Получение с сервера данных пользователя страницы и начальных карточек 
   useEffect(() => {
@@ -205,13 +200,17 @@ function App() {
       });
   }
 
+  function handleSignOut() {
+    
+  }
+
   return (
     <div className="wrapper">
       <CurrentUserContext.Provider value={currentUser}>
         <Header
           loggedIn={loggedIn}
-          setLoggedIn={setLoggedIn}
-          userEmail={userEmail} />
+          userEmail={userEmail}
+          handleSignOut={handleSignOut} />
         <Routes>
           <Route path="*" element={loggedIn ? <Navigate to="/" replace /> : <Navigate to="/sign-in" replace />} />
           <Route path="/" element=
