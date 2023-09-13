@@ -15,7 +15,7 @@ class Api {
       return res.json();
     } else {
       // если ошибка, отклоняем промис
-      return Promise.reject(`Ошибка: ${res.status}`); 
+      return Promise.reject(`Ошибка: ${res.status}`);
     }
   }
 
@@ -197,20 +197,19 @@ class Api {
     })
   }
 
-/**
- * Метод сравнения токена клиента с токеном на сервере
- * @param {string} token token в браузере пользователя
- * @returns {function} возвращает результат работы this._request с переданными аргументами 
- */
-  checkToken(token) {
-    return this._request(`users/me`, {
-      method: 'GET',
-      headers: {
-        "Content-Type": "application/json",
-        "Authorization": `Bearer ${token}`
-      }
+   /**
+   * Метод выхода из личного кабинета пользователя
+   * @returns {function} возвращает результат работы this._request с переданными аргументами 
+   */
+
+  signOut() {
+    return this._request(`signout`, {
+      method: 'DELETE',
+      credentials: 'include',
+      headers: this._headers,
     })
   }
+
 }
 
 const api = new Api({
