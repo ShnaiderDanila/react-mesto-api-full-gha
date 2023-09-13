@@ -15,7 +15,11 @@ const getCards = (req, res, next) => {
 const createCard = (req, res, next) => {
   const { name, link } = req.body;
   Card.create({ name, link, owner: req.user._id })
-    .then((card) => res.status(CREATED_STATUS).send(card))
+    .then((card) => {
+      Card.findOne({ _id: card._id })
+        .populate(['owner', 'likes'])
+        .then((item) => res.status(CREATED_STATUS).send(item));
+    })
     .catch(next);
 };
 
@@ -41,6 +45,7 @@ const toggleLike = (req, res, next, data) => {
     .orFail(() => {
       throw new NotFoundError('Карточка с указанным id не найдена.');
     })
+    .populate(['owner', 'likes'])
     .then((card) => {
       res.send(card);
     })
