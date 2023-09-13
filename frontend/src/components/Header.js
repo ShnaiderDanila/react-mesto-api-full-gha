@@ -1,23 +1,15 @@
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useState } from 'react';
 import logo from '../images/logo.svg';
 
-function Header({ loggedIn, setLoggedIn, userEmail }) {
+function Header({ loggedIn, userEmail, handleSignOut }) {
 
   const location = useLocation();
   const [headerMenuIsActive, setHeaderMenuIsActive] = useState(false);
-  const navigate = useNavigate();
 
   // Функция открытия и закрытия бургер-меню
   function handleHeaderMenu() {
     setHeaderMenuIsActive(!headerMenuIsActive);
-  }
-
-  // Функция обработки выхода
-  function handleSignOut() {
-    localStorage.removeItem('token');
-    setLoggedIn(false);
-    navigate('/sign-in', { replace: true });
   }
 
   return (
