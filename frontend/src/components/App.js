@@ -201,7 +201,14 @@ function App() {
   }
 
   function handleSignOut() {
-    
+    api.signOut()
+      .then(() => {
+        setLoggedIn(false);
+        navigate('/sign-in', { replace: true });
+      })
+      .catch((err) => {
+        console.error(`Ошибка: ${err}`);
+      })
   }
 
   return (
