@@ -13,6 +13,7 @@ const allowedCors = [
   'http://localhost:3001',
   'https://mesto.shnd3r.nomoredomainsicu.ru',
   'http://mesto.shnd3r.nomoredomainsicu.ru',
+  'https://api.mesto.shnd3r.nomoredomainsicu.ru',
 ];
 
 const DEFAULT_ALLOWED_METHODS = 'GET, HEAD, PUT, PATCH, POST, DELETE';
