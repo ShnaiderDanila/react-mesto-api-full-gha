@@ -14,8 +14,6 @@ const auth = (req, res, next) => {
 
   let payload;
 
-  if()
-
   try {
     payload = jwt.verify(token, NODE_ENV === 'production' ? JWT_SECRET : DEV_SECRET);
   } catch (err) {
