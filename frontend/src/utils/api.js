@@ -2,6 +2,7 @@ class Api {
   constructor(options) {
     this._baseUrl = options.baseUrl;
     this._headers = options.headers;
+    this._credentials = options.credentials;
   }
 
   /**
@@ -27,6 +28,8 @@ class Api {
   * @returns {(json|string)} json с данными сервера или строка с ошибкой с сервера
   */
   _request(url, options) {
+    options.headers = this._headers;
+    options.credentials = this._credentials;
     return fetch(`${this._baseUrl}/${url}`, options)
       .then(res => {
         return this._renderServerResponce(res)
@@ -38,9 +41,7 @@ class Api {
    * @return {function} возвращает результат работы this._request с переданными аргументами   
    */
   getUserInfo() {
-    return this._request(`users/me`, {
-      headers: this._headers
-    })
+    return this._request(`users/me`, { method: 'GET' })
   }
 
   /**
@@ -48,9 +49,7 @@ class Api {
    * @return {function} возвращает результат работы this._request с переданными аргументами   
    */
   getInitialCards() {
-    return this._request(`cards`, {
-      headers: this._headers
-    })
+    return this._request(`cards`, { method: 'GET' })
   }
 
   /**
@@ -70,11 +69,10 @@ class Api {
   editProfile(name, about) {
     return this._request(`users/me`, {
       method: 'PATCH',
-      headers: this._headers,
       body: JSON.stringify({
         name: name,
         about: about
-      })
+      }),
     })
   }
 
@@ -87,11 +85,10 @@ class Api {
   addCard(name, link) {
     return this._request(`cards`, {
       method: 'POST',
-      headers: this._headers,
       body: JSON.stringify({
         name: name,
         link: link
-      })
+      }),
     })
   }
 
@@ -101,10 +98,7 @@ class Api {
   * @return {function} возвращает результат работы this._request с переданными аргументами   
   */
   deleteCard(cardId) {
-    return this._request(`cards/${cardId}`, {
-      method: 'DELETE',
-      headers: this._headers,
-    })
+    return this._request(`cards/${cardId}`, { method: 'DELETE' })
   }
 
   /**
@@ -127,10 +121,7 @@ class Api {
    * @returns {function} возвращает результат работы this._request с переданными аргументами 
    */
   setLike(cardId) {
-    return this._request(`cards/${cardId}/likes`, {
-      method: 'PUT',
-      headers: this._headers,
-    })
+    return this._request(`cards/${cardId}/likes`, { method: 'PUT' })
   }
 
 
@@ -140,10 +131,7 @@ class Api {
    * @returns {function} возвращает результат работы this._request с переданными аргументами 
    */
   removeLike(cardId) {
-    return this._request(`cards/${cardId}/likes`, {
-      method: 'DELETE',
-      headers: this._headers,
-    })
+    return this._request(`cards/${cardId}/likes`, { method: 'DELETE' })
   }
 
   /**
@@ -154,10 +142,9 @@ class Api {
   updateAvatar(avatar) {
     return this._request(`users/me/avatar`, {
       method: 'PATCH',
-      headers: this._headers,
       body: JSON.stringify({
         avatar: avatar
-      })
+      }),
     })
   }
 
@@ -170,8 +157,6 @@ class Api {
   register(email, password) {
     return this._request(`signup`, {
       method: 'POST',
-      credentials: 'include',
-      headers: this._headers,
       body: JSON.stringify({
         password: password,
         email: email,
@@ -188,8 +173,6 @@ class Api {
   authorize(email, password) {
     return this._request(`signin`, {
       method: 'POST',
-      credentials: 'include',
-      headers: this._headers,
       body: JSON.stringify({
         password: password,
         email: email,
@@ -197,26 +180,21 @@ class Api {
     })
   }
 
-   /**
-   * Метод выхода из личного кабинета пользователя
-   * @returns {function} возвращает результат работы this._request с переданными аргументами 
-   */
-
+  /**
+  * Метод выхода из личного кабинета пользователя
+  * @returns {function} возвращает результат работы this._request с переданными аргументами 
+  */
   signOut() {
-    return this._request(`signout`, {
-      method: 'DELETE',
-      credentials: 'include',
-      headers: this._headers,
-    })
+    return this._request(`signout`, { method: 'DELETE' })
   }
-
 }
 
 const api = new Api({
-  baseUrl: 'https://api.mesto.shnd3r.nomoredomainsicu.ru',
+  baseUrl: 'http://localhost:3000',
   headers: {
     'Content-Type': 'application/json'
   },
+  credentials: 'include',
 });
 
 export { api };
