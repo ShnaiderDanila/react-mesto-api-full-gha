@@ -90,6 +90,17 @@ const login = (req, res, next) => {
     .catch(next);
 };
 
+const logout = (req, res) => {
+  res
+    .cookie('jwt', 'null', {
+      maxAge: 3000,
+      httpOnly: true,
+      sameSite: 'none',
+      secure: true,
+    })
+    .send({ message: 'Выход успешно выполнен!' });
+};
+
 module.exports = {
   getUsers,
   getUser,
@@ -98,4 +109,5 @@ module.exports = {
   updateUserProfile,
   updateUserAvatar,
   login,
+  logout,
 };
