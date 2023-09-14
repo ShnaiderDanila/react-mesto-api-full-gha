@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const { NODE_ENV, JWT_SECRET } = process.env;
 
 const jwt = require('jsonwebtoken');
@@ -11,6 +13,8 @@ const auth = (req, res, next) => {
   }
 
   let payload;
+
+  if()
 
   try {
     payload = jwt.verify(token, NODE_ENV === 'production' ? JWT_SECRET : DEV_SECRET);
