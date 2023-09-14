@@ -49,6 +49,7 @@ function App() {
   // Стейт-переменная авторизации пользователя
   const [loggedIn, setLoggedIn] = useState(false);
 
+
   const navigate = useNavigate();
 
   /**
@@ -57,9 +58,11 @@ function App() {
   const checkUserAuthorization = useCallback(() => {
     api.getUserInfo()
       .then((userInfo) => {
-        setLoggedIn(true);
-        setUserEmail(userInfo.email);
-        navigate('/', { replace: true });
+        if (userInfo) {
+          setLoggedIn(true);
+          setUserEmail(userInfo.email);
+          navigate('/', { replace: true });
+        }
       })
       .catch((err) => {
         console.error(`Ошибка: ${err}`);
