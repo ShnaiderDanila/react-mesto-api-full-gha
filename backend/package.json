@@ -5,8 +5,8 @@
   "main": "app.js",
   "scripts": {
     "lint": "npx eslint .",
-    "start": "node app.js",
-    "dev": "nodemon app.js"
+    "start": "SET NODE_ENV=production&& nodemon app.js",
+    "dev": "SET NODE_ENV=development&& nodemon app.js"
   },
   "author": "Danila Shnayder",
   "license": "ISC",
