@@ -1,5 +1,3 @@
-const DEV_SECRET = 'dev-secret';
-
 const DEFAULT_ERROR = 500;
 const CONFLICT_ERROR = 409;
 const BAD_REQUEST_ERROR = 400;
@@ -19,7 +17,6 @@ const allowedCors = [
 const DEFAULT_ALLOWED_METHODS = 'GET, HEAD, PUT, PATCH, POST, DELETE';
 
 module.exports = {
-  DEV_SECRET,
   DEFAULT_ERROR,
   CONFLICT_ERROR,
   BAD_REQUEST_ERROR,
