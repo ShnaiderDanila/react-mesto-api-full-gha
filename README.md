@@ -9,21 +9,21 @@
 **Адрес репозитория:** https://github.com/elrouss/react-mesto-api-full-gha
 
 **Ссылки на проект:**
-IP 158.160.123.17
-Frontend https://mesto.shnd3r.nomoredomainsicu.ru
-Backend https://api.mesto.shnd3r.nomoredomainsicu.ru
+- IP 158.160.123.17
+- Frontend https://mesto.shnd3r.nomoredomainsicu.ru
+- Backend https://api.mesto.shnd3r.nomoredomainsicu.ru
 
 **Ссылки на макет:**
-https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?node-id=0%3A1 
-https://www.figma.com/file/bjyvbKKJN2naO0ucURl2Z0/JavaScript.-Sprint-5?node-id=0%3A1 
-https://www.figma.com/file/kRVLKwYG3d1HGLvh7JFWRT/JavaScript.-Sprint-6?node-id=0%3A1 
-https://www.figma.com/file/PSdQFRHoxXJFs2FH8IXViF/JavaScript-9-sprint?node-id=0%3A1 
-https://www.figma.com/file/5H3gsn5lIGPwzBPby9jAOo/Sprint-14-RU?node-id=0%3A1
+- https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?node-id=0%3A1 
+- https://www.figma.com/file/bjyvbKKJN2naO0ucURl2Z0/JavaScript.-Sprint-5?node-id=0%3A1 
+- https://www.figma.com/file/kRVLKwYG3d1HGLvh7JFWRT/JavaScript.-Sprint-6?node-id=0%3A1 
+- https://www.figma.com/file/PSdQFRHoxXJFs2FH8IXViF/JavaScript-9-sprint?node-id=0%3A1 
+- https://www.figma.com/file/5H3gsn5lIGPwzBPby9jAOo/Sprint-14-RU?node-id=0%3A1
 
 **Ссылка на чек-лист:**
 https://code.s3.yandex.net/web-developer/checklists-pdf/new-program/checklist_15.pdf
 
-* - проект прошел код-ревью
+<i>* - проект прошел код-ревью</i>
 
 ## Используемые технологии:
 ### Frontend
