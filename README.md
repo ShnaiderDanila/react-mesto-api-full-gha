@@ -6,12 +6,12 @@
 
 Изначально приложение было написано на нативных технологиях: JavaScript, CSS3 и HTML5. Затем проект был перенесен на "React" с добавлением функционала регистрации и авторизации пользователей, отдельно написана логика серверной части с фреймворком "Express" и в завершение обе части объединены и сохранены на виртуальной машине, размещенной на Яндекс Облаке.
 
-**Адрес репозитория:** https://github.com/elrouss/react-mesto-api-full-gha
+**Адрес репозитория:** https://github.com/Shnd3r/react-mesto-api-full-gha
 
 **Ссылки на проект:**
-- IP 158.160.123.17
-- Frontend https://mesto.shnd3r.nomoredomainsicu.ru
-- Backend https://api.mesto.shnd3r.nomoredomainsicu.ru
+- IP: 158.160.123.17
+- Frontend: https://mesto.shnd3r.nomoredomainsicu.ru
+- Backend: https://api.mesto.shnd3r.nomoredomainsicu.ru
 
 **Ссылки на макет:**
 - https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?node-id=0%3A1 
