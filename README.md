@@ -1,15 +1,15 @@
 # [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=30&pause=1000&vCenter=true&random=false&width=700&height=80&lines=%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%3A+Mesto+(Frontend+%2B+Backend))](https://git.io/typing-svg)
 Дипломный проект в рамках учебы в [Яндекс.Практикум](https://practicum.yandex.ru/) на факультете [Веб-разработчик](https://practicum.yandex.ru/web/)
 
+![Mesto (Backend + Frontend)](https://github.com/Shnd3r/react-mesto-api-full-gha/assets/116545792/9683a207-708d-448a-b94b-dc10ad520167)
+
 ## Описание проекта
 Проект представляет собой адаптивное приложение (SPA), написанное на фреймворке "React" (Frontend) и "Express" (Backend), с возможностью регистрации личного кабинета пользователя, редактированием данных и добавлением фотокарточек в общую галерею.
 
 Изначально приложение было написано на нативных технологиях: JavaScript, CSS3 и HTML5. Затем проект был перенесен на "React" с добавлением функционала регистрации и авторизации пользователей, отдельно написана логика серверной части с фреймворком "Express" и в завершение обе части объединены и сохранены на виртуальной машине, размещенной на Яндекс Облаке.
 
-**Адрес репозитория:** https://github.com/Shnd3r/react-mesto-api-full-gha
-
 **Ссылки на проект:**
-- IP: 158.160.123.17
+- IP: 158.160.117.107
 - Frontend: https://mesto.shnd3r.nomoredomainsicu.ru
 - Backend: https://api.mesto.shnd3r.nomoredomainsicu.ru
 
@@ -95,7 +95,7 @@ git clone https://github.com/Shnd3r/react-mesto-api-full-gha.git
 ```
 npm install
 ```
-#### Запустить приложение в режиме разработчика в директории Backend (можно предварительно настроить порт 3001):
+#### Запустить приложение в режиме разработчика в директории Backend:
 ```
 npm run dev
 ```
