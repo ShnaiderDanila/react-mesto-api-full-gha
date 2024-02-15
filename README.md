@@ -1,7 +1,7 @@
 # [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=30&pause=1000&vCenter=true&random=false&width=700&height=80&lines=%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%3A+Mesto+(Frontend+%2B+Backend))](https://git.io/typing-svg)
 Дипломный проект в рамках учебы в [Яндекс.Практикум](https://practicum.yandex.ru/) на факультете [Веб-разработчик](https://practicum.yandex.ru/web/)
 
-![Mesto (Backend + Frontend)](https://github.com/Shnd3r/react-mesto-api-full-gha/assets/116545792/9683a207-708d-448a-b94b-dc10ad520167)
+![mesto-full-gha](https://github.com/ShnaiderDanila/react-mesto-api-full-gha/assets/116545792/83e7b9f3-374d-4662-8360-212a7f4e57cf)
 
 ## Описание проекта
 Проект представляет собой адаптивное приложение (SPA), написанное на фреймворке "React" (Frontend) и "Express" (Backend), с возможностью регистрации личного кабинета пользователя, редактированием данных и добавлением фотокарточек в общую галерею.
@@ -109,4 +109,4 @@ npm run start
 **Данила Шнайдер**
 
 - E-mail: [d.shnder@gmail.com](mailto:d.shnder@gmail.com)
-- Telegram: [@shnd3r](https://t.me/shnd3r)
+- Telegram: [@shnaider_danila](https://t.me/shnaider_danila)
